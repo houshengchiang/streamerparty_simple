@@ -276,12 +276,13 @@ a.navbar-brand:hover{
 		window.open("https://www.paypal.me/HSChiang/" + 1000)
 	}
 	let scrollToId = (target) =>{
+		let navHeight = document.getElementsByTagName('nav')[0].offsetHeight
 		if (typeof target === 'undefined'){
-			targetElement = 56;
+			targetElement = navHeight;
 		}else{
 			targetElement = document.getElementById(target).offsetTop
 		}
-		window.scrollTo({'behavior':'smooth', 'top': targetElement - 56})
+		window.scrollTo({'behavior':'smooth', 'top': targetElement - navHeight})
 		//alert(targetElement.innerHTML)
 	}
 </script>
